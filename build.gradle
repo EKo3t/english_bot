@@ -11,12 +11,14 @@ repositories {
 
 ext {
     telegramBotsVersion = '6.5.0'
-    lombokVersion = '1.18.26'
-    daggerVersion = '2.45'
+    snakeYamlVersion = '2.0'
+    googleGuiceVersion = '5.1.0'
 }
 
 dependencies {
-    implementation 'org.yaml:snakeyaml:2.0'
+    implementation "org.yaml:snakeyaml:$snakeYamlVersion"
+
+    implementation "com.google.inject:guice:$googleGuiceVersion"
 
     implementation "org.telegram:telegrambots:$telegramBotsVersion"
 }
