@@ -13,6 +13,9 @@ ext {
     telegramBotsVersion = '6.5.0'
     snakeYamlVersion = '2.0'
     googleGuiceVersion = '5.1.0'
+    jooqVersion = '3.17.8'
+    postgresVersion = '42.5.4'
+    lombokVersion = '1.18.26'
 }
 
 dependencies {
@@ -21,4 +24,13 @@ dependencies {
     implementation "com.google.inject:guice:$googleGuiceVersion"
 
     implementation "org.telegram:telegrambots:$telegramBotsVersion"
+
+    implementation "org.postgresql:postgresql:$postgresVersion"
+
+    //lombok
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
 }

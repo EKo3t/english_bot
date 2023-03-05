@@ -1,1 +1,9 @@
-botToken:
+telegram:
+  botToken: "someToken"
+
+db:
+  postgres:
+    username: "postgres"
+    password: "secretPassword"
+    url: "localhost:5432"
+    useSsl: true
